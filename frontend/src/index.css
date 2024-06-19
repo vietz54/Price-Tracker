@@ -1,0 +1,58 @@
+
+html,
+body {
+  scroll-behavior: smooth;  
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	background: linear-gradient(45deg, #49a09d, #5f2c82);
+	font-family: sans-serif;
+	font-weight: 100;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.table-container {
+  display: flex;
+  justify-content: center;
+}
+
+.main h1 {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  /* color: #F0E68C; */
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  animation: shadow 2s infinite alternate; /* Áp dụng hiệu ứng bóng đổ với tên keyframe là shadow */
+}
+
+/* Định nghĩa keyframes cho hiệu ứng bóng đổ */
+@keyframes shadow {
+  0% {
+    text-shadow: none;
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(138, 43, 226, 0.7), /* Bóng đổ màu tím */
+                 0 0 40px rgba(138, 43, 226, 0.5), /* Bóng đổ màu tím */
+                 0 0 60px rgba(138, 43, 226, 0.3); /* Bóng đổ màu tím */
+  }
+}
+.main {
+  padding: 5%;
+}
+
+.row td {
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+

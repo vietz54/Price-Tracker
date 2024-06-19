@@ -1,0 +1,202 @@
+:root {
+
+    --white: rgba(238, 232, 232, 0.98);
+    --primary-color: #6C63FF; 
+    --secondary-color: #FF6584; 
+    --tertiary-color: #32E0C4; 
+    --background-gradient: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    --input-hover-color: rgba(255, 255, 255, 0.1);
+    --input-focus-color: rgba(255, 255, 255, 0.2);
+    --button-hover-color: #FFC107;
+    --error-color: #F44336; 
+    --h2-color: #333333; 
+  }
+  .login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+  }
+  
+  /* Login shadow and transformation */
+  .login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 2em;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-strong);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    
+  }
+  
+  .login-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styling h2  */
+  .login-form {
+    background: linear-gradient(to bottom right, #ebe4e4, #6f6fcc); /* Màu nền trắng-tím */
+    padding: 2em;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .login-form h2 {
+    color: var(--h2-color);
+    margin-bottom: 1em; 
+    font-weight: bold;
+  }
+  
+  .login-form p {
+    font-size: 1.2rem;
+    margin-bottom: 2em;
+    color: var(--text-color);
+  }
+  
+  .login-form a {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    transition: color 0.2s ease-in-out;
+  }
+  
+  .login-form a:hover {
+    transform: scale(1.02); /* Phóng to nhẹ */
+    color: var(--tertiary-color);
+  }
+  
+  /* Inputs focus/hover states */
+  .login-form input {
+    background: transparent;
+    width: calc(100% - 2em);
+    padding: 1em;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  }
+  
+  .login-form input:hover,
+  .login-form input:focus {
+    background: var(--input-hover-color);
+    border-color: var(--secondary-color);
+    box-shadow: var(--shadow-strong);
+  }
+  
+  .login-form input[type="button"] {
+    width: auto;
+    padding: 0.8em 1.5em;
+    font-size: 1rem;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 20px;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+    cursor: pointer; 
+  }
+  
+  .login-form input[type="button"]:hover {
+    background: var(--button-hover-color);
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); 
+  }
+  /* Placeholder styling  */
+  ::placeholder {
+    opacity: 0.7;
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: var(--error-color);
+    font-size: 0.9rem;
+    margin-top: 1em;
+  }
+
+
+  /* Button styling with additional effects */
+ .toggle-button {
+    padding: 0.8em 1.5em;
+    font-size: 1rem;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 20px;
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+  
+.toggle-button:hover {
+    background: rgb(69, 44, 184);
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(12, 9, 4, 0.4);
+  }
+  
+  
+  .login-title {
+    text-shadow: 2px 2px 4px rgba(153, 67, 67, 0.2); 
+  }
+
+  
+  /* Additional global styles for consistency */
+  
+  .input-wrapper {
+    margin-bottom: 1em; 
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 1em;
+    margin: 0;
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .error-message {
+    color: var(--error-color);
+    margin-top: 1em;
+  }
+
+  .login-title {
+    font-size: 2.5rem; 
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); 
+    margin-bottom: 1em; 
+  }
+  
+  .toggle-message {
+    font-size: 1.2rem; 
+    margin-top: 1.5em; 
+   
+    text-align: center; 
+    font-weight: bold; 
+    padding: 0.5em 0; 
+}
+
+
+.login-button {
+    padding: 0.5em 2em; 
+    font-size: 1.2rem; 
+    background: var(--primary-color); 
+    color: var(--white); 
+    border: none;
+    border-radius: 25px; 
+    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer; 
+    outline: none; 
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.login-button:hover {
+    background: rgb(69, 44, 184);
+    transform: scale(1.1); 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); 
+}
+

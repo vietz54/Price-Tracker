@@ -1,0 +1,113 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: auto; 
+  height: auto; 
+  padding-top: 50px;
+  padding-bottom: 15px;
+}
+
+#close {
+  overflow: hidden;
+  position: relative;
+  border: none;
+  padding: 0;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background: transparent;
+  color: #aa161e;
+  font: inherit;
+  text-indent: 100%;
+  cursor: pointer;
+  transition: background 0.3s ease; 
+}
+
+#close:focus {
+  outline: solid 0 transparent;
+  box-shadow: 0 0 0 2px #c51c1c;
+}
+
+#close:hover {
+  background: rgba(200, 200, 200, 0.2); 
+}
+
+#close:before,
+#close:after {
+  position: absolute;
+  top: 15%;
+  left: calc(50% - 0.0625em);
+  width: 0.125em;
+  height: 70%;
+  border-radius: 0.125em;
+  transform: rotate(45deg);
+  background: currentcolor;
+  content: '';
+}
+
+#close:after {
+  transform: rotate(-45deg);
+}
+
+.search-text-list-container {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container h2 {
+  color: #110404;
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    border-bottom: 2px solid #333;
+    padding-bottom: 2px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0; 
+}
+.recommended-section h2 {
+  font-size: 32px; 
+  margin-bottom: 15px; 
+}
+
+.search-text-item {
+    border-radius: 4px; 
+    margin-bottom: 3px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; 
+  
+}
+.search-text-item:hover {
+  transform: translateY(-3px); 
+}
+
+.search-text-button {
+  background-color: #3a9ecc; 
+  color: #fff; 
+  border: none; 
+  border-radius: 4px;
+  padding: 8px 16px; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+}
+
+.search-text-button:hover {
+  background-color: #2771c0; 
+  box-shadow: 0 4px 8px 0 rgba(102, 16, 16, 0.2); /* Shadow khi hover */
+}
+
+.search-text-list-container, .recommended-section {
+  width: 48%;
+  padding: 10px;
+}
+
+.recommended-section {
+  border-left: 1px solid #ccc;  
+  width: 30%; 
+  margin-left: auto; 
+  border-left: 1px solid #ccc; 
+  color: #fff; 
+  font-size: 18px
+}
+.recommended-section ul li {
+  margin-bottom: 10px;
+}

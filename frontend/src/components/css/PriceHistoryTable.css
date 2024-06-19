@@ -1,0 +1,244 @@
+
+table {
+  width: 950px; 
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  margin: auto; 
+  
+}
+/* Căn giữa phần tiêu đề h2 */
+.centered {
+  text-align: center;
+}
+
+/* Căn giữa hàng tr */
+
+th,
+td {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+	color: #080303;
+}
+
+th {
+	text-align: left;
+}
+
+thead {
+	th {
+		background-color: #55608f;
+	}
+}
+
+tbody {
+	tr {
+		&:hover {
+			background-color: rgba(255,255,255,0.3);
+		}
+	}
+	td {
+		position: relative;
+		&:hover {
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: -9999px;
+				bottom: -9999px;
+				background-color: rgba(255,255,255,0.2);
+				z-index: -1;
+			}
+		}
+	}
+}
+
+.close-button {
+  position: relative;
+  margin: 20px auto; 
+  width: 50px;
+  cursor: pointer;
+  background: none;
+}
+
+.close-button .inner {
+  width: inherit;
+  text-align: center;
+}
+
+.close-button label { 
+  font-size: .8em; 
+  line-height: 4em;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all .3s ease-in;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.close-button .inner:before, 
+.close-button .inner:after {
+  position: absolute;
+  content: '';
+  height: 1px;
+  width: inherit;
+  background: #FFC107;
+  left: 0;
+  transition: all .3s ease-in;
+}
+
+.close-button .inner:before {
+  top: 50%; 
+  transform: rotate(45deg);  
+}
+
+.close-button .inner:after {  
+  bottom: 50%;
+  transform: rotate(-45deg);  
+}
+
+.close-button:hover label {
+  opacity: 1;
+}
+
+.close-button:hover .inner:before,
+.close-button:hover .inner:after {
+  transform: rotate(0);
+}
+
+.close-button:hover .inner:before {
+  top: 0;
+}
+
+.close-button:hover .inner:after {
+  bottom: 0;
+}
+/* Style cho liên kết sản phẩm */
+.product-name-link {
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease; 
+  transition: box-shadow 0.3s ease, transform 0.3s ease; 
+  cursor: pointer; 
+}
+
+.product-name-link:hover {
+  color: #0852ad; 
+  transform: scale(1.1); 
+ 
+}
+
+/* Cập nhật cho sort-container */
+.sort-container {
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+  width: 950px; 
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 5px; 
+}
+/* Định dạng cho label trong sort-container */
+.sort-container label {
+  margin-right: 10px; 
+  font-weight: bold;
+
+}
+
+.sort-container select {
+  padding: 8px 12px; 
+  border-radius: 5px; 
+  border: 1px solid #ccc; 
+  outline: none; 
+  transition: all 0.3s ease-in-out; 
+  background-color: transparent; 
+  color: #fffcfc; 
+}
+
+.sort-container select:hover, 
+.sort-container select:focus {
+  border-color: #007bff; 
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+/* Định dạng cho option trong select */
+.sort-container select option {
+  font-size: 1em; 
+  font-weight: normal; 
+  padding: 5px; 
+  color: #080202; 
+}
+
+/* Cập nhật cho price-filter-container */
+.price-filter-container {
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+  width: 950px; 
+  margin: 10px auto; 
+  padding: 10px;
+  border-radius: 5px; 
+}
+
+/* Định dạng cho label  */
+.price-filter-container label {
+  margin-right: 10px; 
+  font-weight: bold;
+}
+
+/* Định dạng cho select */
+.price-filter-container select {
+  padding: 8px 12px; 
+  border-radius: 5px; 
+  border: 1px solid #ccc; 
+  outline: none; 
+  transition: all 0.3s ease-in-out; 
+  background-color: transparent; 
+  color: #fffcfc; 
+}
+
+/* Định dạng khi hover hoặc focus trên select */
+.price-filter-container select:hover, 
+.price-filter-container select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+}
+
+/* Định dạng cho option trong select */
+.price-filter-container select option {
+  font-size: 1em; 
+  font-weight: normal; 
+  padding: 5px; 
+  color: #080202; 
+}
+/* Định dạng cho phần phân trang */
+.pagination-container {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Định dạng các nút phân trang */
+.pagination-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50; 
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+/* Hiệu ứng hover cho nút phân trang */
+.pagination-button:hover {
+  background-color: #45a049; 
+}
+
+/* Định dạng cho phần hiển thị số trang */
+.pagination-text {
+  margin: 0 10px;
+  font-size: 16px;
+}
